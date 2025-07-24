@@ -1,8 +1,21 @@
 ---
 import BaseLayout from "../layout/BaseLayout.astro";
+import '../styles/contactpage.css';
 const pageTitle = "Contact Me";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h3>Contact Me!</h3>
+  <div class="contact-form">
+    <div class="input-container">
+      <div class="form-title">
+        <h3>Contact Me!</h3>
+      </div>
+        <label>Name:</label>
+        <input type="text" />
+        <label>Email Address:</label>
+        <input type="email" />
+        <label>Message:</label>
+        <textarea rows="5"></textarea>
+    </div>
+  </div>
 </BaseLayout>

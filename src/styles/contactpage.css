@@ -1,0 +1,40 @@
+.contact-form {
+  width: 90%;
+  margin: 2rem auto;
+  border: #ffe4c4 1px solid;
+  border-radius: 12px;
+  background-color: #ffe4c4;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-title h3 {
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 830px) {
+  .contact-form {
+    width: 50%;
+  }
+
+  .input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 70%;
+  }
+
+  .form-title {
+    grid-column: 1/3;
+  }
+}
