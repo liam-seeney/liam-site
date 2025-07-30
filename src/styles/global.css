@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+.site-container {
+  width:80%;
+  margin: 0 auto;
+}
+
 .nav-bar-wrapper {
   width: 100%;
   background-color: #ffe4c4;
