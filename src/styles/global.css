@@ -10,7 +10,7 @@ body {
 }
 
 .site-container {
-  width: 75%;
+  padding: 10px;
   margin: 0 auto;
 }
 
@@ -72,6 +72,10 @@ body {
 }
 
 @media screen and (min-width: 830px) {
+  .site-container {
+    width: 75%;
+    padding: 0;
+  }
   .nav-bar-container {
     height: 4rem;
     align-content: center;
