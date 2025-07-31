@@ -7,7 +7,7 @@ html, body {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
     url("../images/hero-image.jpg");
   height: 50%;
   background-position: center;
@@ -18,8 +18,9 @@ html, body {
 
 .hero-text {
   text-align: center;
+  text-shadow: #000 0 0 20px;
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
