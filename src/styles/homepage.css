@@ -1,0 +1,43 @@
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../images/hero-image.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  text-shadow: #000 0 0 20px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.home-page-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 830px) {
+  .home-page-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 70%;
+  }
+
+  .intro-text {
+    grid-column: 1;
+  }
+
+  .intro-image {
+    grid-column: 2;
+  }
+}
