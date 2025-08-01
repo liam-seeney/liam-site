@@ -47,6 +47,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+} 
+
+.nav-grid-one a {
+  text-decoration: none;
+  color: #000
 }
 
 .nav-bar-wrapper h2 {
