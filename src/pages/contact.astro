@@ -10,12 +10,10 @@ const pageTitle = "Contact Me";
       <div class="form-title">
         <h3>Contact Me!</h3>
       </div>
-        <label>Name:</label>
-        <input type="text" />
-        <label>Email Address:</label>
-        <input type="email" />
-        <label>Message:</label>
-        <textarea rows="5"></textarea>
+        <input type="text" id="name" autocomplete="on" placeholder="Name"/>
+        <input type="email" id="email" autocomplete="on" placeholder="Email"/>
+        <textarea rows="8" id="message" autocomplete="off" placeholder="Message"></textarea>
+        <button class="button">Submit</button>
     </div>
   </div>
 </BaseLayout>

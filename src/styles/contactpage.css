@@ -1,3 +1,24 @@
+input,
+textarea {
+  font-family: Montserrat;
+  color: #000;
+  font-size: medium;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+textarea::placeholder {
+  font-family: Montserrat;
+  color: #7e7e7e;
+}
+
+input::placeholder {
+  font-family: Montserrat;
+  color: #7e7e7e;
+}
+
 .contact-form {
   width: 90%;
   margin: 2rem auto;
@@ -25,12 +46,11 @@
 @media screen and (min-width: 830px) {
   .contact-form {
     width: 50%;
+    margin: 4rem auto;
   }
 
   .input-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 70%;
   }
 
