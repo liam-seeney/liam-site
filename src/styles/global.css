@@ -7,6 +7,15 @@ body {
   height: 100%;
 }
 
+.content-container {
+  padding: 1rem;
+  background-color: #6a6464;
+}
+
+.content-container h3 {
+  margin: 0;
+}
+
 .button {
   background-color: #fff;
   width: fit-content;
