@@ -41,7 +41,6 @@ body {
 
 .nav-bar-container {
   width: 100%;
-  background-color: #ffe4c4;
 }
 
 .nav-bar-wrapper {
@@ -103,7 +102,7 @@ body {
 
 @media screen and (min-width: 830px) {
   .nav-bar-container {
-    height: 4rem;
+    height: 5rem;
     align-content: center;
   }
 

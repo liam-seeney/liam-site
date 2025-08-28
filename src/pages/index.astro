@@ -1,17 +1,13 @@
 ---
 import BaseLayout from "../layout/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
 import "../styles/homepage.css";
 
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>LMS Timber Buildings</h1>
-      <a href="/contact" class="button">Contact Me!</a>
-    </div>
-  </div>
+  <Hero />
   <div class="home-page-intro">
     <div class="intro-text">
       <h3>Hi! &#128075;</h3>
