@@ -2,8 +2,8 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
     url("../images/hero-image.jpg");
   height: 40%;
-  width: 90%;
-  margin: 30px auto;
+  width: 100%;
+  margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,28 +27,24 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  width: 90%;
-  margin: 0 auto;
+  margin-top: 2rem;
 }
 
-.intro-text h3 {
-  margin: 0;
+.home-page-intro h3,
+p {
+  margin: 0 0 0.5rem 0;
 }
 
 @media screen and (min-width: 830px) {
   .hero-image {
     height: 50%;
-    width: 75%;
   }
   .home-page-intro {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: 75%;
   }
 
   .intro-text {
     grid-column: 1;
-    padding: 1rem 0;
   }
 
   .intro-image {
