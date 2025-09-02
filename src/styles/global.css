@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+.navbar-title {
+  font-size: 1rem;
+}
+
 .content-container {
   width: 90%;
   margin: 0 auto;
@@ -99,6 +103,10 @@ body {
 @media screen and (min-width: 830px) {
   .content-container {
     width: 70%;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
   }
 
   .nav-bar-container {
