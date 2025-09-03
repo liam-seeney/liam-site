@@ -100,7 +100,7 @@ body {
   display: unset;
 }
 
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 845px) {
   .content-container {
     width: 70%;
   }

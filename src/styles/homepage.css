@@ -40,7 +40,7 @@ p {
   margin: 0 0 0.5rem 0;
 }
 
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 845px) {
   .hero-image {
     height: 50%;
   }
