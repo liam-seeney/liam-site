@@ -10,6 +10,7 @@ textarea {
 }
 
 textarea::placeholder {
+  -webkit-appearance: none;
   font-family: Montserrat;
   color: #7e7e7e;
 }
