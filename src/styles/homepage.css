@@ -23,36 +23,36 @@
   color: white;
 }
 
-.intro-text a {
+.intro-text h3 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.home-page-intro a {
   text-decoration: none;
   color: unset;
 }
 
 .home-page-intro {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
   margin-top: 2rem;
 }
 
-.home-page-intro h3,
-p {
-  margin: 0 0 0.5rem 0;
+.home-page-intro p ul {
+  margin: 0 0 1rem 0;
+}
+
+.call-to-action {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 845px) {
   .hero-image {
     height: 50%;
   }
-  .home-page-intro {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .intro-text {
-    grid-column: 1;
-  }
-
-  .intro-image {
-    grid-column: 2;
+  .call-to-action {
+    padding: 0;
   }
 }
