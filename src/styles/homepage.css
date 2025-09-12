@@ -1,6 +1,6 @@
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../images/hero-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+    url("../images/garden-room-01.png");
   height: 60%;
   width: 100%;
   margin: 0 auto;
@@ -17,10 +17,14 @@
   text-align: center;
   text-shadow: #000 0 0 20px;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.hero-text h1 {
+  margin: 0;
 }
 
 .home-page-intro a {
