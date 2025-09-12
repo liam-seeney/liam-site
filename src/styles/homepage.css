@@ -1,7 +1,7 @@
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
     url("../images/garden-room-01.png");
-  height: 60%;
+  height: 70%;
   width: 100%;
   margin: 0 auto;
   background-position: center;
