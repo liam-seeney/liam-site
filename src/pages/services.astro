@@ -1,8 +1,51 @@
 ---
 import BaseLayout from "../layout/BaseLayout.astro";
+import "../styles/page.css";
 const pageTitle = "Services";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="content-container"><h3>{pageTitle}</h3></div>
+  <h2 class="page-heading">{pageTitle}</h2>
+  <div class="service-details">
+    <div class="details-text">
+      <h3>Timber Frame Construction</h3>
+      <p>
+        Timber-frame construction is at the heart of everything we build. This
+        modern method uses precision-engineered timber panels to create a
+        structure that’s strong, warm, and highly energy-efficient. Because the
+        frame is manufactured from sustainably sourced wood, it has a lighter
+        environmental footprint than traditional masonry, while still offering
+        excellent durability and design flexibility. It also allows us to
+        complete projects faster and with less disruption, whether we’re adding
+        a kitchen extension, creating a self-contained annexe, or crafting a
+        bespoke garden room. The result is a beautifully finished space with
+        outstanding thermal performance — comfortable all year round and built
+        to stand the test of time.
+      </p>
+    </div>
+    <div class="detail-image">
+      <img src="../images/garden-room-01.png" />
+    </div>
+  </div>
+  <div class="service-details">
+    <div class="details-text">
+      <h3>Timber Frame Construction</h3>
+      <p>
+        Timber-frame construction is at the heart of everything we build. This
+        modern method uses precision-engineered timber panels to create a
+        structure that’s strong, warm, and highly energy-efficient. Because the
+        frame is manufactured from sustainably sourced wood, it has a lighter
+        environmental footprint than traditional masonry, while still offering
+        excellent durability and design flexibility. It also allows us to
+        complete projects faster and with less disruption, whether we’re adding
+        a kitchen extension, creating a self-contained annexe, or crafting a
+        bespoke garden room. The result is a beautifully finished space with
+        outstanding thermal performance — comfortable all year round and built
+        to stand the test of time.
+      </p>
+    </div>
+    <div class="detail-image">
+      <img src="../images/garden-room-01.png" />
+    </div>
+  </div>
 </BaseLayout>
