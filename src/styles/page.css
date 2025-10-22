@@ -2,22 +2,19 @@
   text-align: center;
 }
 
-.service-details {
-  margin: 2rem auto;
+.service-container {
   width: 90%;
+  margin: 2rem auto;
 }
 
-.details-text {
+.service-details {
   background-color: blanchedalmond;
   border-radius: 15px;
   padding: 2rem;
 }
 
 @media screen and (min-width: 845px) {
-  .service-details {
-  }
-
-  .details-text {
-    align-self: center;
+  .service-container {
+    width: 100%;
   }
 }
