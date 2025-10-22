@@ -4,24 +4,16 @@
 
 .service-details {
   margin: 2rem auto;
-  width: 90%;
 }
 
-.detail-image img {
-  width: 100%;
-}
 @media screen and (min-width: 845px) {
   .service-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    padding: 2rem;
   }
 
   .details-text {
     align-self: center;
-  }
-
-  .detail-image img {
-    object-fit: cover;
   }
 }

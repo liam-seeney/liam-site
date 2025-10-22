@@ -59,4 +59,8 @@
   .call-to-action {
     padding: 0;
   }
+
+  .hero-text {
+    top: 75%;
+  }
 }
