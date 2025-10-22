@@ -8,12 +8,21 @@ const pageTitle = "Home";
 
 <BaseLayout pageTitle={pageTitle}>
   <Hero />
-  <div class="home-page-intro">
+  <div class="home-page-intro fade-in">
     <div class="intro-text">
       <p>
-          We create inviting spaces that make life at home richer and more flexible. As timber-frame specialists, we design and build everything from garden offices, gyms and workshops to annexes, holiday cottages, garages, and elegant kitchen or living extensions. Timber-frame construction lets us deliver rooms that feel warm, comfortable and solid, with excellent thermal performance and a light environmental footprint thanks to sustainably sourced materials. Every project is finished to the same high standard, whether it’s a cosy garden retreat or a striking new extension — giving you a space that blends seamlessly with your home and enhances the way you live.
+        We create inviting spaces that make life at home richer and more
+        flexible. As timber-frame specialists, we design and build everything
+        from garden offices, gyms and workshops to annexes, holiday cottages,
+        garages, and elegant kitchen or living extensions. Timber-frame
+        construction lets us deliver rooms that feel warm, comfortable and
+        solid, with excellent thermal performance and a light environmental
+        footprint thanks to sustainably sourced materials. Every project is
+        finished to the same high standard, whether it’s a cosy garden retreat
+        or a striking new extension — giving you a space that blends seamlessly
+        with your home and enhances the way you live.
       </p>
-      <div class="call-to-action">
+      <div class="call-to-action fade-in">
         <p>
           If you're considering a renovation or extension,
           <a href="/contact"><b>get in touch</b></a> to see how I can bring your
@@ -22,6 +31,30 @@ const pageTitle = "Home";
       </div>
     </div>
   </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+
+  <script>
+    const hero = document.querySelector(".hero-image") as HTMLElement | null;
+    if (hero) {
+      window.addEventListener("scroll", () => {
+        const offset = window.scrollY * 0.4; // adjust 0.4 for more/less movement
+        hero.style.backgroundPositionY = `${offset}px`;
+      });
+    }
+  </script>
 </BaseLayout>
-
-

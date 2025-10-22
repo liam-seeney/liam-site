@@ -1,65 +1,82 @@
 ---
 import BaseLayout from "../layout/BaseLayout.astro";
 import "../styles/page.css";
+
 const pageTitle = "Services";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2 class="page-heading">{pageTitle}</h2>
+
   <div class="service-container">
     <div class="service-details">
-      <div class="details-text">
+      <div class="details-text fade-in">
         <h3>Timber Frame Construction</h3>
         <p>
-          Timber-frame construction is at the heart of everything we build. This
-          modern method uses precision-engineered timber panels to create a
-          structure that’s strong, warm, and highly energy-efficient. Because
-          the frame is manufactured from sustainably sourced wood, it has a
-          lighter environmental footprint than traditional masonry, while still
-          offering excellent durability and design flexibility. It also allows
-          us to complete projects faster and with less disruption, whether we’re
-          adding a kitchen extension, creating a self-contained annexe, or
-          crafting a bespoke garden room. The result is a beautifully finished
-          space with outstanding thermal performance — comfortable all year
-          round and built to stand the test of time.
+          At the core of everything we build is precision timber-frame
+          construction. This modern method delivers strength, warmth, and
+          exceptional energy efficiency, all while using sustainably sourced
+          materials. Timber offers greater design flexibility than traditional
+          masonry and allows us to build faster with less disruption. Whether
+          you’re planning an extension, annexe, or bespoke garden room, our
+          timber-frame approach ensures your new space is beautifully crafted,
+          thermally efficient, and built to last.
         </p>
       </div>
-      <div class="details-text">
+
+      <div class="details-text fade-in">
         <h3>Garden Rooms</h3>
         <p>
-          Our bespoke garden rooms are designed to create beautiful, practical
-          spaces that enhance your home and lifestyle. Whether it’s a peaceful
-          office, creative studio, home gym or entertaining space, each building
-          is crafted with the same attention to detail as a modern home. Built
-          using high-performance timber-frame construction, our garden rooms are
-          warm, durable, and finished to your exact specification — providing a
-          comfortable, year-round retreat just steps from your back door.
+          Our bespoke garden rooms create beautiful, functional spaces that
+          enrich everyday living. From peaceful home offices and creative
+          studios to home gyms and entertaining spaces, every garden room is
+          built to the same specification as a modern home. Using
+          high-performance timber-frame construction, we ensure your space is
+          warm, durable, and comfortable all year round — a true extension of
+          your lifestyle.
         </p>
       </div>
-      <div class="details-text">
+
+      <div class="details-text fade-in">
         <h3>Annexes</h3>
         <p>
-          Self-contained annexes are perfect for modern living — ideal as guest
-          accommodation, independent living spaces, or even short-stay holiday
-          lets. Each annexe is constructed using sustainable timber-frame
-          techniques, offering exceptional energy efficiency and long-term
-          durability. We focus on intelligent design, beautiful finishes, and
-          practical layouts that feel like a natural extension of your property,
-          providing comfort, privacy, and value that lasts.
+          Our self-contained annexes are designed for modern living — ideal for
+          guests, independent family members, or holiday accommodation. Each is
+          built using sustainable timber-frame methods to deliver excellent
+          insulation, durability, and efficiency. We design every annexe to
+          complement your property and provide a comfortable, private space that
+          feels like home.
         </p>
       </div>
-      <div class="details-text">
+
+      <div class="details-text fade-in">
         <h3>Extensions</h3>
         <p>
-          Timber-frame extensions are a contemporary way to add space and
-          transform the way you live. Whether you’re expanding your kitchen,
-          creating an open-plan living area, or adding a new room with character
-          and warmth, we combine precision craftsmanship with high-performance
-          materials to deliver stunning results. Every extension is built to the
-          same standard as a new home — highly insulated, sustainably built, and
-          seamlessly integrated with your existing property.
+          A timber-frame extension is a contemporary, energy-efficient way to
+          add space and value to your home. Whether you’re creating an open-plan
+          kitchen, a family room, or additional living space, we combine expert
+          craftsmanship with modern building materials to achieve stunning,
+          seamless results. Every project is tailored to your home and built to
+          the same high standard as a new build.
         </p>
       </div>
     </div>
   </div>
+
+  <script>
+    // Trigger fade-in animations when elements enter the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
 </BaseLayout>

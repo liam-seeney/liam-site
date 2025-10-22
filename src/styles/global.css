@@ -105,6 +105,21 @@ body {
   display: unset;
 }
 
+.site-footer {
+  background-color: #1c1c1c;
+  color: #f9f7f4;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: "Monserrat", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.footer-content p {
+  margin: 0;
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 845px) {
   .content-container {
     width: 70%;

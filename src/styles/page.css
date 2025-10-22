@@ -1,20 +1,79 @@
 .page-heading {
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  margin-top: 3rem;
+  color: #2f5233; /* matches your accent color */
 }
 
 .service-container {
-  width: 90%;
-  margin: 2rem auto;
+  max-width: 1000px;
+  margin: 3rem auto 6rem;
+  padding: 0 1rem;
 }
 
 .service-details {
-  background-color: blanchedalmond;
-  border-radius: 15px;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
+.details-text {
+  background-color: #f9f7f4; /* warm neutral */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.details-text:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.details-text h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details-text p {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.fade-in:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.fade-in:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.fade-in:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Responsive layout */
 @media screen and (min-width: 845px) {
   .service-container {
-    width: 100%;
+    width: 80%;
   }
 }
