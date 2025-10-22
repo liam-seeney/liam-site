@@ -49,12 +49,92 @@ const pageTitle = "Home";
   </script>
 
   <script>
-    const hero = document.querySelector(".hero-image") as HTMLElement | null;
-    if (hero) {
-      window.addEventListener("scroll", () => {
-        const offset = window.scrollY * 0.4; // adjust 0.4 for more/less movement
-        hero.style.backgroundPositionY = `${offset}px`;
+    (function () {
+      // Smooth parallax using requestAnimationFrame and transform on .hero-bg
+      const bg = document.querySelector(".hero-bg") as HTMLElement | null;
+      if (!bg) return;
+
+      // Mobile detection
+      const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+      let latestScroll = 0;
+      let ticking = false;
+      let intensity = 0.25; // base intensity for desktop
+      let currentY = 0; // used for lerp
+      let ease = 0.08; // lerp factor: smaller = smoother/laggier
+
+      // Mobile-specific settings (reduced displacement, faster follow)
+      const mobileSettings = {
+        intensity: 0.12,
+        ease: 0.12,
+        maxTranslate: 60, // px - clamp so the background doesn't move too far on small screens
+      };
+
+      // Apply mobile settings if appropriate
+      function applySettings() {
+        if (isMobile()) {
+          intensity = mobileSettings.intensity;
+          ease = mobileSettings.ease;
+        } else {
+          intensity = 0.25;
+          ease = 0.08;
+        }
+      }
+
+      applySettings();
+
+      function onScroll() {
+        latestScroll = window.scrollY;
+        requestTick();
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }
+
+      function update() {
+        // Target position based on scroll, scaled by intensity
+        let targetY = latestScroll * intensity;
+
+        // clamp on mobile to avoid large translations
+        if (isMobile() && mobileSettings.maxTranslate) {
+          targetY = Math.max(
+            Math.min(targetY, mobileSettings.maxTranslate),
+            -mobileSettings.maxTranslate
+          );
+        }
+
+        // Lerp currentY towards targetY for smooth easing
+        currentY += (targetY - currentY) * ease;
+
+        // Round to whole pixels for slightly better performance
+        const displayY = Math.round(currentY);
+
+        bg!.style.transform = `translate3d(0, ${displayY}px, 0)`;
+
+        // Continue the rAF loop if we're still moving or new scrolls arrive
+        // If difference is small, consider the animation settled
+        if (Math.abs(currentY - targetY) > 0.5) {
+          requestAnimationFrame(update);
+        } else {
+          ticking = false;
+        }
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      // Recompute on resize (enable/disable on mobile)
+      window.addEventListener("resize", () => {
+        if (isMobile()) {
+          bg!.style.transform = "";
+          window.removeEventListener("scroll", onScroll);
+        } else {
+          window.addEventListener("scroll", onScroll, { passive: true });
+        }
       });
-    }
+    })();
   </script>
 </BaseLayout>

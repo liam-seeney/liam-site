@@ -71,6 +71,12 @@
   transition-delay: 0.4s;
 }
 
+.clause-text {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 /* Responsive layout */
 @media screen and (min-width: 845px) {
   .service-container {
