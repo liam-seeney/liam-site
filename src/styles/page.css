@@ -4,6 +4,10 @@
 
 .service-details {
   margin: 2rem auto;
+  width: 90%;
+}
+
+.details-text {
   background-color: blanchedalmond;
   border-radius: 15px;
   padding: 2rem;
